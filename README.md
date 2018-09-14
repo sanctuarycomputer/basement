@@ -15,16 +15,6 @@ Spacing units for padding and margin.
 $spacing-units: 0rem, .25rem, .5rem, .75rem, 1rem, 2rem, 3rem, 4rem, 6rem, 8rem;
 ```
 
-Z indicies
-```
-$z-indicies: 0, 1, 2, 3;
-```
-
-Border widths
-```
-$border-widths: 0, 1px, 2px, 3px;
-```
-
 Ratios for `.aspect-<ratio>` utility class.
 ```
 $aspect-ratios: (
