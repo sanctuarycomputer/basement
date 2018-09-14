@@ -1,3 +1,4 @@
+@import 'defaults';
 
 /*
 Strips units from given $number i.e. 10px -> 10
@@ -26,5 +27,13 @@ $replacement.
 Strips units and replaces '.' with '_' for class name safety.
 */
 @function format-unit($unit) {
-  @return str-replace(#{strip-units($unit)}, '0.', '_');
+  @if type-of($unit) == number {
+    @return str-replace(
+      str-replace('#{strip-units($unit)}', '0.', $decimal_deliminator),
+      '.',
+      $decimal_deliminator
+    );
+  } @else {
+    @return $unit;
+  }
 }

@@ -1,27 +1,19 @@
-$classes: (
-  flex: (
-    display: flex,
-    margin: 0px auto
-  ),
-  block: (
-    display: block,
-    position: relative
-  )
-);
-
-// $spacing-units: 1rem, 2rem, 3rem, 4rem, 6rem, 8rem !default;
+@import
+  'defaults',
+  'definitions',
+  'functions',
+  'grid';
 
 /*
-What if names are mb6 { margin-bottom: 6rem } ?
-Have name corrispond to size instead of index in scale? That way if you change scale, it won't matter.
+Add auto to spacing units
 */
+$spacing-units: append($spacing-units, auto);
 
-/* add auto! */
-
+/*
+Add margin and padding definitions
+*/
 @each $unit in $spacing-units {
-  $i: index($spacing-units, $unit);
-
-  $classes: map-merge($classes, (
+  $class-definitions: map-merge($class-definitions, (
     'm#{format_unit($unit)}': (margin: #{$unit}),
     'mt#{format_unit($unit)}': (margin-top: #{$unit}),
     'mr#{format_unit($unit)}': (margin-right: #{$unit}),
@@ -38,40 +30,90 @@ Have name corrispond to size instead of index in scale? That way if you change s
     'px#{format_unit($unit)}': (padding-left: #{$unit}, padding-right: #{$unit}),
     'py#{format_unit($unit)}': (padding-top: #{$unit}, padding-bottom: #{$unit})
   ));
+
+  /*
+  If dynamic spacing is enabled, add all margin and padding classes to
+  dynamic-classes list.
+  */
+  @if $dynamic-spacing {
+    $dynamic-classes: join($dynamic-classes, (
+      'm#{format_unit($unit)}',
+      'mt#{format_unit($unit)}',
+      'mr#{format_unit($unit)}',
+      'mb#{format_unit($unit)}',
+      'ml#{format_unit($unit)}',
+      'mx#{format_unit($unit)}',
+      'my#{format_unit($unit)}',
+      'mxn#{format_unit($unit)}',
+      'p#{format_unit($unit)}',
+      'pt#{format_unit($unit)}',
+      'pr#{format_unit($unit)}',
+      'pb#{format_unit($unit)}',
+      'pl#{format_unit($unit)}',
+      'px#{format_unit($unit)}',
+      'py#{format_unit($unit)}'
+    ))
+  }
+}
+
+/*
+Add in grid class definitions
+*/
+$class-definitions: map-merge($class-definitions, $grid-definitions);
+
+@debug $class-definitions;
+
+/*
+If dynamic grid is enabled, add grid class names to $dynamic-classe
+*/
+@if $dynamic_grid {
+  @each $name, $definition in $grid-definitions {
+    $dynamic-classes: append($dynamic-classes, $name)
+  };
+}
+
+/*
+Generate a $dynamic-lass-definitions map from the $dynamic classes list.
+*/
+$dynamic-class-definitions: ();
+@each $class-name in $dynamic-classes {
+  @if map-has-key($class-definitions, $class-name) {
+    $dynamic-class-definitions: map-merge($dynamic-class-definitions, (
+      $class-name: map-get($class-definitions, $class-name)
+    ));
+  }
 }
 
 
-// $breakpoint-map: ();
-// @each $name, $size in $breakpoints {
-//   $breakpoint-map: map-merge($breakpoint-map, (
-//     '#{$name}-up': 'min-width: #{$size}'
-//   ));
-//
-//   $breakpoint-map: map-merge($breakpoint-map, (
-//     '#{$name}-down': 'max-width: #{$size}'
-//   ));
-// }
-
-$breakpoint-map: ();
-@each $name, $size in $breakpoints {
-  $breakpoint-map: map-merge($breakpoint-map, (
-    '#{$name}': 'min-width: #{$size}'
-  ));
-}
-
-
-@each $name, $definition in $classes {
+/*
+Generate a class for every class definition.
+*/
+@each $name, $definition in $class-definitions {
   .#{$name} {
     @each $property, $value in $definition {
-      #{$property}: #{$value};
+      #{$property}: $value;
     }
   }
 }
 
 
-@each $breakpoint, $query in $breakpoint-map {
+/*
+Generate a media query for each breakpoint.
+*/
+$breakpoint-queries: ();
+@each $name, $size in $breakpoints {
+  $breakpoint-queries: map-merge($breakpoint-queries, (
+    '#{$name}': 'min-width: #{$size}'
+  ));
+}
+
+/*
+Generate a class at every breakpoint for each class included in the
+$dynamic-classes list.
+*/
+@each $breakpoint, $query in $breakpoint-queries {
   @media (#{$query}) {
-    @each $name, $definition in $classes {
+    @each $name, $definition in $dynamic-class-definitions {
       .#{$breakpoint}-#{$name} {
         @each $property, $value in $definition {
           #{$property}: #{$value};

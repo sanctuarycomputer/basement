@@ -1,0 +1,9 @@
+
+.aspect-square { }
+.aspect-landscape -> 16:9
+.aspect-portrait -> 2:3
+
+
+*[aspect] > * {
+  // is inner
+}

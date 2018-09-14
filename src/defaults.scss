@@ -16,3 +16,14 @@ $breakpoints: (
   lg: 64rem,
   xl: 72rem
 ) !default;
+
+$dynamic_spacing: true !default;
+
+$decimal_deliminator: '_';
+
+$dynamic_grid: true !default;
+
+$grid-columns: 12 !default;
+
+// $dynamic-class-additions: !default;
+// $dynamic-class-subtractions: !default;
