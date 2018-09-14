@@ -1,0 +1,8 @@
+{
+  "name": "basement",
+  "version": "0.0.1",
+  "description": "Ground floor CSS utility classes",
+  "repository": "https://github.com/sanctuarycomputer/basement.git",
+  "author": "Sanctuary Computer <dev@sanctuary.computer>",
+  "license": "MIT"
+}
