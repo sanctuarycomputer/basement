@@ -25,7 +25,7 @@ $colors: (
   'black': #000,
   'white': #FFF,
   'blue': #0A3862
-);
+) !default;
 
 
 // TODO: Ability to add/subtract classes that will generated at all breakpoints.
