@@ -1,8 +1,8 @@
 @import 'defaults';
 
-/*
-Add auto to spacing units
-*/
+//
+// Add auto to spacing units
+//
 $spacing-units: append($spacing-units, auto);
 
 $spacing-definitions: ();

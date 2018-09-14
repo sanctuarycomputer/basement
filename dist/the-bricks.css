@@ -1,22 +1,3 @@
-/*
-TODO: Ability to add/subtract classes that will generated at all breakpoints.
-*/
-/*
-TODO: Ability to add/subtract classes that will generated at all breakpoints.
-*/
-/*
-Strips units from given $number i.e. 10px -> 10
-*/
-/*
-If $value found in $string, return $string with $value replaced with
-$replacement.
-*/
-/*
-Strips units and replaces '.' with '_' for class name safety.
-*/
-/*
-Casts a string to a number
-*/
 .aspect-square::before { padding-top: 100%; }
 
 .aspect-landscape::before { padding-top: 56.25%; }
@@ -27,64 +8,6 @@ Casts a string to a number
 [class^='aspect']::before { display: block; content: ' '; width: 100%; }
 [class^='aspect'] > * { position: absolute; top: 0; left: 0; right: 0; bottom: 0; }
 
-/*
-TODO: Ability to add/subtract classes that will generated at all breakpoints.
-*/
-/*
-TODO: Ability to add/subtract classes that will generated at all breakpoints.
-*/
-/*
-Classes in this list will be generated with all breakpoint prefixes.
-For example, if 'flex' is included in this list 'flex', 'sm-flex', 'md-flex',
-'lg-flex', 'xl-flex', will all be generated (name of the prefixes is dependant
-on what is set).
-*/
-/*
-TODO: Ability to add/subtract classes that will generated at all breakpoints.
-*/
-/*
-Strips units from given $number i.e. 10px -> 10
-*/
-/*
-If $value found in $string, return $string with $value replaced with
-$replacement.
-*/
-/*
-Strips units and replaces '.' with '_' for class name safety.
-*/
-/*
-Casts a string to a number
-*/
-/*
-TODO: Ability to add/subtract classes that will generated at all breakpoints.
-*/
-/*
-TODO: Ability to add/subtract classes that will generated at all breakpoints.
-*/
-/*
-Add auto to spacing units
-*/
-/*
-Add spacing class definitions
-*/
-/*
-If dynamic spacing is enabled, add spacing class names to $dynamic-classe
-*/
-/*
-Add grid class definitions
-*/
-/*
-If dynamic grid is enabled, add grid class names to $dynamic-classe
-*/
-/*
-Add color class definitions
-*/
-/*
-Generate a $dynamic-lass-definitions map from the $dynamic classes list.
-*/
-/*
-Generate a class for every class definition.
-*/
 .bold { font-weight: bold; }
 
 .regular { font-weight: normal; }
@@ -675,13 +598,6 @@ Generate a class for every class definition.
 
 .border-color-blue { border-color: #0A3862; }
 
-/*
-Generate a media query for each breakpoint.
-*/
-/*
-Generate a class at every breakpoint for each class included in the
-$dynamic-classes list.
-*/
 @media (min-width: 40rem) { .sm-text-left { text-align: left; }
   .sm-text-center { text-align: center; }
   .sm-text-justify { text-align: justify; }

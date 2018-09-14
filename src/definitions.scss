@@ -97,12 +97,11 @@ $class-definitions: (
 );
 
 
-/*
-Classes in this list will be generated with all breakpoint prefixes.
-For example, if 'flex' is included in this list 'flex', 'sm-flex', 'md-flex',
-'lg-flex', 'xl-flex', will all be generated (name of the prefixes is dependant
-on what is set).
-*/
+
+// Classes in this list will be generated with all breakpoint prefixes.
+// For example, if 'flex' is included in this list 'flex', 'sm-flex', 'md-flex',
+// 'lg-flex', 'xl-flex', will all be generated (name of the prefixes is dependant
+// on what is set).
 $dynamic-classes:
   text-left,
   text-right,
