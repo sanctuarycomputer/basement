@@ -27,10 +27,10 @@ $aspect-ratios: (
 Breakpoints
 ```
 $breakpoints: (
-  'sm': 40rem,
-  'md': 52rem,
-  'lg': 64rem,
-  'xl': 72rem
+  'sm': 640px,
+  'md': 832px,
+  'lg': 1024px,
+  'xl': 1152px
 );
 ```
 
