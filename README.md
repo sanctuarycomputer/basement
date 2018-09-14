@@ -30,7 +30,7 @@ Add the following loader to your webpack config (you'll need to use [react-app-r
 },
 ```
 
-Then rename your `index.css` file to `index.scss` (and be sure to change any javascript imports to `import 'index.scss';`).
+Then rename your `index.css` file to `index.scss` (and be sure to change any javascript imports to `import 'index.scss';`). Sass should be working nicely, now!
 
 ---
 
@@ -43,7 +43,7 @@ yarn install basement --dev
 And require it in `index.scss` like so:
 
 ```
-@import "~basement/src/index";
+@import '~basement/src/index';
 ```
 
 # Settings
