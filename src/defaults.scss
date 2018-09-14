@@ -5,25 +5,34 @@ $z-indicies: 0, 1, 2, 3 !default;
 $border-widths: 0, 1px, 2px, 3px !default;
 
 $aspect-ratios: (
-  square: '1:1',
-  landscape: '16:9',
-  portrait: '2:3'
+  'square': (1, 1),
+  'landscape': (16, 9),
+  'portrait': (2, 3)
 ) !default;
 
 $breakpoints: (
-  sm: 40rem,
-  md: 52rem,
-  lg: 64rem,
-  xl: 72rem
+  'sm': 40rem,
+  'md': 52rem,
+  'lg': 64rem,
+  'xl': 72rem
 ) !default;
 
 $dynamic_spacing: true !default;
 
 $decimal_deliminator: '_';
 
-$dynamic_grid: true !default;
+$dynamic-grid: true !default;
 
 $grid-columns: 12 !default;
 
+$colors: (
+  'black': #000,
+  'white': #FFF,
+  'blue': #0A3862
+);
+
+/*
+TODO: Ability to add/subtract classes that will generated at all breakpoints.
+*/
 // $dynamic-class-additions: !default;
 // $dynamic-class-subtractions: !default;

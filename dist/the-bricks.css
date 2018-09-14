@@ -1,8 +1,8 @@
 /*
-Classes in this list will be generated with all breakpoint prefixes.
-For example, if 'flex' is included in this list 'flex', 'sm-flex', 'md-flex',
-'lg-flex', 'xl-flex', will all be generated (name of the prefixes is dependant
-on what is set).
+TODO: Ability to add/subtract classes that will generated at all breakpoints.
+*/
+/*
+TODO: Ability to add/subtract classes that will generated at all breakpoints.
 */
 /*
 Strips units from given $number i.e. 10px -> 10
@@ -15,60 +15,69 @@ $replacement.
 Strips units and replaces '.' with '_' for class name safety.
 */
 /*
+Casts a string to a number
+*/
+.aspect-square::before { padding-top: 100%; }
+
+.aspect-landscape::before { padding-top: 56.25%; }
+
+.aspect-portrait::before { padding-top: 150%; }
+
+[class^='aspect'] { position: relative; }
+[class^='aspect']::before { display: block; content: ' '; width: 100%; }
+[class^='aspect'] > * { position: absolute; top: 0; left: 0; right: 0; bottom: 0; }
+
+/*
+TODO: Ability to add/subtract classes that will generated at all breakpoints.
+*/
+/*
+TODO: Ability to add/subtract classes that will generated at all breakpoints.
+*/
+/*
+Classes in this list will be generated with all breakpoint prefixes.
+For example, if 'flex' is included in this list 'flex', 'sm-flex', 'md-flex',
+'lg-flex', 'xl-flex', will all be generated (name of the prefixes is dependant
+on what is set).
+*/
+/*
+TODO: Ability to add/subtract classes that will generated at all breakpoints.
+*/
+/*
+Strips units from given $number i.e. 10px -> 10
+*/
+/*
+If $value found in $string, return $string with $value replaced with
+$replacement.
+*/
+/*
+Strips units and replaces '.' with '_' for class name safety.
+*/
+/*
+Casts a string to a number
+*/
+/*
+TODO: Ability to add/subtract classes that will generated at all breakpoints.
+*/
+/*
+TODO: Ability to add/subtract classes that will generated at all breakpoints.
+*/
+/*
 Add auto to spacing units
 */
 /*
-Add margin and padding definitions
+Add spacing class definitions
 */
 /*
-If dynamic spacing is enabled, add all margin and padding classes to
-dynamic-classes list.
+If dynamic spacing is enabled, add spacing class names to $dynamic-classe
 */
 /*
-If dynamic spacing is enabled, add all margin and padding classes to
-dynamic-classes list.
-*/
-/*
-If dynamic spacing is enabled, add all margin and padding classes to
-dynamic-classes list.
-*/
-/*
-If dynamic spacing is enabled, add all margin and padding classes to
-dynamic-classes list.
-*/
-/*
-If dynamic spacing is enabled, add all margin and padding classes to
-dynamic-classes list.
-*/
-/*
-If dynamic spacing is enabled, add all margin and padding classes to
-dynamic-classes list.
-*/
-/*
-If dynamic spacing is enabled, add all margin and padding classes to
-dynamic-classes list.
-*/
-/*
-If dynamic spacing is enabled, add all margin and padding classes to
-dynamic-classes list.
-*/
-/*
-If dynamic spacing is enabled, add all margin and padding classes to
-dynamic-classes list.
-*/
-/*
-If dynamic spacing is enabled, add all margin and padding classes to
-dynamic-classes list.
-*/
-/*
-If dynamic spacing is enabled, add all margin and padding classes to
-dynamic-classes list.
-*/
-/*
-Add in grid class definitions
+Add grid class definitions
 */
 /*
 If dynamic grid is enabled, add grid class names to $dynamic-classe
+*/
+/*
+Add color class definitions
 */
 /*
 Generate a $dynamic-lass-definitions map from the $dynamic classes list.
@@ -647,6 +656,24 @@ Generate a class for every class definition.
 .col-12 { width: 100%; }
 
 .off-12 { margin-left: 100%; }
+
+.color-black { color: #000; }
+
+.bg-color-black { background-color: #000; }
+
+.border-color-black { border-color: #000; }
+
+.color-white { color: #FFF; }
+
+.bg-color-white { background-color: #FFF; }
+
+.border-color-white { border-color: #FFF; }
+
+.color-blue { color: #0A3862; }
+
+.bg-color-blue { background-color: #0A3862; }
+
+.border-color-blue { border-color: #0A3862; }
 
 /*
 Generate a media query for each breakpoint.

@@ -1,76 +1,45 @@
 @import
+  'aspect-ratios',
+  'colors',
   'defaults',
   'definitions',
   'functions',
-  'grid';
+  'grid',
+  'spacing';
 
 /*
-Add auto to spacing units
+Add spacing class definitions
 */
-$spacing-units: append($spacing-units, auto);
+$class-definitions: map-merge($class-definitions, $spacing-definitions);
 
 /*
-Add margin and padding definitions
+If dynamic spacing is enabled, add spacing class names to $dynamic-classe
 */
-@each $unit in $spacing-units {
-  $class-definitions: map-merge($class-definitions, (
-    'm#{format_unit($unit)}': (margin: #{$unit}),
-    'mt#{format_unit($unit)}': (margin-top: #{$unit}),
-    'mr#{format_unit($unit)}': (margin-right: #{$unit}),
-    'mb#{format_unit($unit)}': (margin-bottom: #{$unit}),
-    'ml#{format_unit($unit)}': (margin-left: #{$unit}),
-    'mx#{format_unit($unit)}': (margin-left: #{$unit}, margin-right: #{$unit}),
-    'my#{format_unit($unit)}': (margin-top: #{$unit}, margin-bottom: #{$unit}),
-    'mxn#{format_unit($unit)}': (margin-left: -#{$unit}, margin-right: -#{$unit}),
-    'p#{format_unit($unit)}': (padding: #{$unit}),
-    'pt#{format_unit($unit)}': (padding-top: #{$unit}),
-    'pr#{format_unit($unit)}': (padding-right: #{$unit}),
-    'pb#{format_unit($unit)}': (padding-bottom: #{$unit}),
-    'pl#{format_unit($unit)}': (padding-left: #{$unit}),
-    'px#{format_unit($unit)}': (padding-left: #{$unit}, padding-right: #{$unit}),
-    'py#{format_unit($unit)}': (padding-top: #{$unit}, padding-bottom: #{$unit})
-  ));
-
-  /*
-  If dynamic spacing is enabled, add all margin and padding classes to
-  dynamic-classes list.
-  */
-  @if $dynamic-spacing {
-    $dynamic-classes: join($dynamic-classes, (
-      'm#{format_unit($unit)}',
-      'mt#{format_unit($unit)}',
-      'mr#{format_unit($unit)}',
-      'mb#{format_unit($unit)}',
-      'ml#{format_unit($unit)}',
-      'mx#{format_unit($unit)}',
-      'my#{format_unit($unit)}',
-      'mxn#{format_unit($unit)}',
-      'p#{format_unit($unit)}',
-      'pt#{format_unit($unit)}',
-      'pr#{format_unit($unit)}',
-      'pb#{format_unit($unit)}',
-      'pl#{format_unit($unit)}',
-      'px#{format_unit($unit)}',
-      'py#{format_unit($unit)}'
-    ))
-  }
+@if $dynamic-spacing {
+  @each $name, $definition in $spacing-definitions {
+    $dynamic-classes: append($dynamic-classes, $name)
+  };
 }
 
 /*
-Add in grid class definitions
+Add grid class definitions
 */
 $class-definitions: map-merge($class-definitions, $grid-definitions);
-
-@debug $class-definitions;
 
 /*
 If dynamic grid is enabled, add grid class names to $dynamic-classe
 */
-@if $dynamic_grid {
+@if $dynamic-grid {
   @each $name, $definition in $grid-definitions {
     $dynamic-classes: append($dynamic-classes, $name)
   };
 }
+
+/*
+Add color class definitions
+*/
+$class-definitions: map-merge($class-definitions, $color-definitions);
+
 
 /*
 Generate a $dynamic-lass-definitions map from the $dynamic classes list.
@@ -84,7 +53,6 @@ $dynamic-class-definitions: ();
   }
 }
 
-
 /*
 Generate a class for every class definition.
 */
@@ -95,7 +63,6 @@ Generate a class for every class definition.
     }
   }
 }
-
 
 /*
 Generate a media query for each breakpoint.

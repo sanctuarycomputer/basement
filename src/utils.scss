@@ -1,0 +1,6 @@
+/*
+Returns a color from the $color map. Used color('blue') for example.
+*/
+@function color($color-name) {
+  @return map-get($colors, $color-name);
+}
