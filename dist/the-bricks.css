@@ -1,0 +1,62 @@
+/*
+Error: Undefined variable: "$spacing-units".
+        on line 21 of src/index.scss
+
+16: Have name corrispond to size instead of index in scale? That way if you change scale, it won't matter.
+17: *\/
+18: 
+19: /* add auto! *\/
+20: 
+21: @each $unit in $spacing-units {
+22:   $i: index($spacing-units, $unit);
+23: 
+24:   $classes: map-merge($classes, (
+25:     'm#{format_unit($unit)}': (margin: #{$unit}),
+26:     'mt#{format_unit($unit)}': (margin-top: #{$unit}),
+
+Backtrace:
+src/index.scss:21
+/Users/conor/.rvm/gems/ruby-2.3.1/gems/sass-3.5.1/lib/sass/script/tree/variable.rb:49:in `_perform'
+/Users/conor/.rvm/gems/ruby-2.3.1/gems/sass-3.5.1/lib/sass/script/tree/node.rb:50:in `perform'
+/Users/conor/.rvm/gems/ruby-2.3.1/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:233:in `visit_each'
+/Users/conor/.rvm/gems/ruby-2.3.1/gems/sass-3.5.1/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/conor/.rvm/gems/ruby-2.3.1/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
+/Users/conor/.rvm/gems/ruby-2.3.1/gems/sass-3.5.1/lib/sass/stack.rb:79:in `block in with_base'
+/Users/conor/.rvm/gems/ruby-2.3.1/gems/sass-3.5.1/lib/sass/stack.rb:135:in `with_frame'
+/Users/conor/.rvm/gems/ruby-2.3.1/gems/sass-3.5.1/lib/sass/stack.rb:79:in `with_base'
+/Users/conor/.rvm/gems/ruby-2.3.1/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:162:in `visit'
+/Users/conor/.rvm/gems/ruby-2.3.1/gems/sass-3.5.1/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/Users/conor/.rvm/gems/ruby-2.3.1/gems/sass-3.5.1/lib/sass/tree/visitors/base.rb:52:in `map'
+/Users/conor/.rvm/gems/ruby-2.3.1/gems/sass-3.5.1/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/Users/conor/.rvm/gems/ruby-2.3.1/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:171:in `block in visit_children'
+/Users/conor/.rvm/gems/ruby-2.3.1/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
+/Users/conor/.rvm/gems/ruby-2.3.1/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:170:in `visit_children'
+/Users/conor/.rvm/gems/ruby-2.3.1/gems/sass-3.5.1/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+/Users/conor/.rvm/gems/ruby-2.3.1/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:190:in `visit_root'
+/Users/conor/.rvm/gems/ruby-2.3.1/gems/sass-3.5.1/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/conor/.rvm/gems/ruby-2.3.1/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:161:in `visit'
+/Users/conor/.rvm/gems/ruby-2.3.1/gems/sass-3.5.1/lib/sass/tree/visitors/perform.rb:10:in `visit'
+/Users/conor/.rvm/gems/ruby-2.3.1/gems/sass-3.5.1/lib/sass/tree/root_node.rb:36:in `css_tree'
+/Users/conor/.rvm/gems/ruby-2.3.1/gems/sass-3.5.1/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+/Users/conor/.rvm/gems/ruby-2.3.1/gems/sass-3.5.1/lib/sass/engine.rb:389:in `_render_with_sourcemap'
+/Users/conor/.rvm/gems/ruby-2.3.1/gems/sass-3.5.1/lib/sass/engine.rb:307:in `render_with_sourcemap'
+/Users/conor/.rvm/gems/ruby-2.3.1/gems/sass-3.5.1/lib/sass/plugin/compiler.rb:462:in `update_stylesheet'
+/Users/conor/.rvm/gems/ruby-2.3.1/gems/sass-3.5.1/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+/Users/conor/.rvm/gems/ruby-2.3.1/gems/sass-3.5.1/lib/sass/plugin/compiler.rb:209:in `each'
+/Users/conor/.rvm/gems/ruby-2.3.1/gems/sass-3.5.1/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/Users/conor/.rvm/gems/ruby-2.3.1/gems/sass-3.5.1/lib/sass/plugin/compiler.rb:294:in `watch'
+/Users/conor/.rvm/gems/ruby-2.3.1/gems/sass-3.5.1/lib/sass/plugin.rb:109:in `method_missing'
+/Users/conor/.rvm/gems/ruby-2.3.1/gems/sass-3.5.1/lib/sass/exec/sass_scss.rb:360:in `watch_or_update'
+/Users/conor/.rvm/gems/ruby-2.3.1/gems/sass-3.5.1/lib/sass/exec/sass_scss.rb:51:in `process_result'
+/Users/conor/.rvm/gems/ruby-2.3.1/gems/sass-3.5.1/lib/sass/exec/base.rb:52:in `parse'
+/Users/conor/.rvm/gems/ruby-2.3.1/gems/sass-3.5.1/lib/sass/exec/base.rb:19:in `parse!'
+/Users/conor/.rvm/gems/ruby-2.3.1/gems/sass-3.5.1/bin/sass:13:in `<top (required)>'
+/Users/conor/.rvm/gems/ruby-2.3.1/bin/sass:23:in `load'
+/Users/conor/.rvm/gems/ruby-2.3.1/bin/sass:23:in `<main>'
+/Users/conor/.rvm/gems/ruby-2.3.1/bin/ruby_executable_hooks:15:in `eval'
+/Users/conor/.rvm/gems/ruby-2.3.1/bin/ruby_executable_hooks:15:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Undefined variable: \"$spacing-units\".\A         on line 21 of src/index.scss\A \A 16: Have name corrispond to size instead of index in scale? That way if you change scale, it won't matter.\A 17: */\A 18: \A 19: /* add auto! */\A 20: \A 21: @each $unit in $spacing-units {\A 22:   $i: index($spacing-units, $unit);\A 23: \A 24:   $classes: map-merge($classes, (\A 25:     'm#{format_unit($unit)}': (margin: #{$unit}),\A 26:     'mt#{format_unit($unit)}': (margin-top: #{$unit}),"; }

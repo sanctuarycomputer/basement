@@ -1,0 +1,3 @@
+#!/bin/bash
+
+sass --watch src/index.scss:dist/the-bricks.css --style compact

@@ -1,0 +1,82 @@
+$classes: (
+  flex: (
+    display: flex,
+    margin: 0px auto
+  ),
+  block: (
+    display: block,
+    position: relative
+  )
+);
+
+// $spacing-units: 1rem, 2rem, 3rem, 4rem, 6rem, 8rem !default;
+
+/*
+What if names are mb6 { margin-bottom: 6rem } ?
+Have name corrispond to size instead of index in scale? That way if you change scale, it won't matter.
+*/
+
+/* add auto! */
+
+@each $unit in $spacing-units {
+  $i: index($spacing-units, $unit);
+
+  $classes: map-merge($classes, (
+    'm#{format_unit($unit)}': (margin: #{$unit}),
+    'mt#{format_unit($unit)}': (margin-top: #{$unit}),
+    'mr#{format_unit($unit)}': (margin-right: #{$unit}),
+    'mb#{format_unit($unit)}': (margin-bottom: #{$unit}),
+    'ml#{format_unit($unit)}': (margin-left: #{$unit}),
+    'mx#{format_unit($unit)}': (margin-left: #{$unit}, margin-right: #{$unit}),
+    'my#{format_unit($unit)}': (margin-top: #{$unit}, margin-bottom: #{$unit}),
+    'mxn#{format_unit($unit)}': (margin-left: -#{$unit}, margin-right: -#{$unit}),
+    'p#{format_unit($unit)}': (padding: #{$unit}),
+    'pt#{format_unit($unit)}': (padding-top: #{$unit}),
+    'pr#{format_unit($unit)}': (padding-right: #{$unit}),
+    'pb#{format_unit($unit)}': (padding-bottom: #{$unit}),
+    'pl#{format_unit($unit)}': (padding-left: #{$unit}),
+    'px#{format_unit($unit)}': (padding-left: #{$unit}, padding-right: #{$unit}),
+    'py#{format_unit($unit)}': (padding-top: #{$unit}, padding-bottom: #{$unit})
+  ));
+}
+
+
+// $breakpoint-map: ();
+// @each $name, $size in $breakpoints {
+//   $breakpoint-map: map-merge($breakpoint-map, (
+//     '#{$name}-up': 'min-width: #{$size}'
+//   ));
+//
+//   $breakpoint-map: map-merge($breakpoint-map, (
+//     '#{$name}-down': 'max-width: #{$size}'
+//   ));
+// }
+
+$breakpoint-map: ();
+@each $name, $size in $breakpoints {
+  $breakpoint-map: map-merge($breakpoint-map, (
+    '#{$name}': 'min-width: #{$size}'
+  ));
+}
+
+
+@each $name, $definition in $classes {
+  .#{$name} {
+    @each $property, $value in $definition {
+      #{$property}: #{$value};
+    }
+  }
+}
+
+
+@each $breakpoint, $query in $breakpoint-map {
+  @media (#{$query}) {
+    @each $name, $definition in $classes {
+      .#{$breakpoint}-#{$name} {
+        @each $property, $value in $definition {
+          #{$property}: #{$value};
+        }
+      }
+    }
+  }
+}
