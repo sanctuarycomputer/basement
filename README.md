@@ -1,4 +1,6 @@
-![Alt text](basement_logo_1200.png?raw=true "Basement Logo")
+<p align="center">
+  <img src="basement_logo_1200.png" width="400"/>
+</p>
 
 # Basement
 Ground floor CSS utility classes
