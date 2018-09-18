@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="basement_logo.svg" width="400"/>
+</p>
+
 # Basement
 Ground floor CSS utility classes
 
@@ -34,7 +38,7 @@ Then rename your `index.css` file to `index.scss` (and be sure to change any jav
 
 ---
 
-Now you can install basement: 
+Now you can install basement:
 
 ```
 yarn install basement --dev
