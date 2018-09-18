@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="basement_logo_1200.png" width="400"/>
+  <img src="basement_logo.svg" width="400"/>
 </p>
 
 # Basement
