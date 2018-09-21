@@ -51,56 +51,16 @@ And require it in `index.scss` like so:
 ```
 
 # Settings
-Spacing units for padding and margin.
-```
-$spacing-units: 0rem, .25rem, .5rem, .75rem, 1rem, 2rem, 3rem, 4rem, 6rem, 8rem;
-```
 
-Ratios for `.aspect-<ratio>` utility class.
-```
-$aspect-ratios: (
-  'square': (1, 1),
-  'landscape': (16, 9),
-  'portrait': (2, 3)
-);
-```
+Overwriting these settings is encouraged! To do so, define them in a `.scss` file and import them before Basement.
 
-Breakpoints
-```
-$breakpoints: (
-  'sm': 640px,
-  'md': 832px,
-  'lg': 1024px,
-  'xl': 1152px
-);
-```
-
-Dynamic spacing (whether or not each margin and padding class is generated for each breakpoint).
-```
-$dynamic_spacing: true;
-```
-
-The deliminator used to replace a `.`
-`mb1_5` = `margin-bottom: 1.5rem`
-```
-$decimal_deliminator: '_';
-```
-
-Dynamic grid (hether or not each `col-<i>` class is generated for each breakpoint).
-```
-$dynamic-grid: true;
-```
-
-Amount of columns in the grid.
-```
-$grid-columns: 12;
-```
-
-Color map.
-```
-$colors: (
-  'black': #000,
-  'white': #FFF,
-  'blue': #0A3862
-);
-```
+| variable | description | default |
+| --- | --- | --- |
+| `$grid-columns` | Amount of columns in the grid. | `12` |
+| `$colors` | Color map use for `color-<color>`, `bg-<color>`, and `border-<color>` classes. | `('black': #000, 'white': #FFF, 'blue': #0A3862);` |
+| `$breakpoints` | Media query breakpoints. | `('sm': 640px, 'md': 832px, 'lg': 1024px, 'xl': 1152px)` |
+| `$spacing-units` | Spacing units for padding and margin. | `0rem, .25rem, .5rem, .75rem, 1rem, 2rem, 3rem, 4rem, 6rem, 8rem;` |
+| `$aspect-ratios` | Ratios for `.aspect-<ratio>` utility class. | `('square': (1, 1), 'landscape': (16, 9), 'portrait': (2, 3));`|
+| `$dynamic_spacing` | Whether or not each margin and padding class is generated for each breakpoint. | `true` |
+| `$decimal_deliminator` | The deliminator used to replace a `.` | `'_'` |
+| `$dynamic-grid` | Whether or not each `col-<i>` class is generated for each breakpoint. | `true` |
