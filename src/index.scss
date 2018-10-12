@@ -82,7 +82,7 @@ $breakpoint-queries: ();
 @each $breakpoint, $query in $breakpoint-queries {
   @media (#{$query}) {
     @each $name, $definition in $dynamic-class-definitions {
-      .#{$breakpoint}-#{$name} {
+      .#{$breakpoint}\:#{$name} {
         @each $property, $value in $definition {
           #{$property}: #{$value};
         }
