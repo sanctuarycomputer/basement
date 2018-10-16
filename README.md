@@ -57,7 +57,7 @@ Overwriting these settings is encouraged! To do so, define them in a `.scss` fil
 | variable | description | default |
 | --- | --- | --- |
 | `$grid-columns` | Amount of columns in the grid. | `12` |
-| `$colors` | Color map use for `color-<color>`, `bg-<color>`, and `border-<color>` classes. | `('black': #000, 'white': #FFF, 'blue': #0A3862);` |
+| `$colors` | Color map use for `color-<color>`, `bg-color-<color>`, and `border-color-<color>` classes. | `('black': #000, 'white': #FFF, 'blue': #0A3862);` |
 | `$breakpoints` | Media query breakpoints. | `('sm': 640px, 'md': 832px, 'lg': 1024px, 'xl': 1152px)` |
 | `$spacing-units` | Spacing units for padding and margin. | `0rem, .25rem, .5rem, .75rem, 1rem, 2rem, 3rem, 4rem, 6rem, 8rem;` |
 | `$aspect-ratios` | Ratios for `.aspect-<ratio>` utility class. | `('square': (1, 1), 'landscape': (16, 9), 'portrait': (2, 3));`|
