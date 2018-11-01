@@ -98,7 +98,8 @@ $class-definitions: (
   vh100: ( height: 100vh ),
   vw100: ( width: 100vw ),
   opacity-0: ( opacity: 0 ),
-  opacity-1: ( opacity: 1 )
+  opacity-1: ( opacity: 1 ),
+  break-word: ( word-wrap: break-word, overflow-wrap: break-word )
 );
 
 
