@@ -44,6 +44,10 @@
 
 .overflow-hidden { overflow: hidden; }
 
+.overflow-x-hidden { overflow-x: hidden; }
+
+.overflow-y-hidden { overflow-y: hidden; }
+
 .overflow-auto { overflow: auto; }
 
 .overflow-y-scroll { overflow-y: scroll; }
@@ -203,6 +207,8 @@
 .opacity-0 { opacity: 0; }
 
 .opacity-1 { opacity: 1; }
+
+.break-word { word-wrap: break-word; overflow-wrap: break-word; }
 
 .m0 { margin: 0rem; }
 
@@ -614,6 +620,8 @@
   .sm\:table-cell { display: table-cell; }
   .sm\:flex { display: flex; }
   .sm\:inline-flex { display: inline-flex; }
+  .sm\:fixed { position: fixed; }
+  .sm\:sticky { position: sticky; }
   .sm\:left { float: left; }
   .sm\:right { float: right; }
   .sm\:flex-row { flex-direction: row; }
@@ -846,6 +854,8 @@
   .md\:table-cell { display: table-cell; }
   .md\:flex { display: flex; }
   .md\:inline-flex { display: inline-flex; }
+  .md\:fixed { position: fixed; }
+  .md\:sticky { position: sticky; }
   .md\:left { float: left; }
   .md\:right { float: right; }
   .md\:flex-row { flex-direction: row; }
@@ -1078,6 +1088,8 @@
   .lg\:table-cell { display: table-cell; }
   .lg\:flex { display: flex; }
   .lg\:inline-flex { display: inline-flex; }
+  .lg\:fixed { position: fixed; }
+  .lg\:sticky { position: sticky; }
   .lg\:left { float: left; }
   .lg\:right { float: right; }
   .lg\:flex-row { flex-direction: row; }
@@ -1310,6 +1322,8 @@
   .xl\:table-cell { display: table-cell; }
   .xl\:flex { display: flex; }
   .xl\:inline-flex { display: inline-flex; }
+  .xl\:fixed { position: fixed; }
+  .xl\:sticky { position: sticky; }
   .xl\:left { float: left; }
   .xl\:right { float: right; }
   .xl\:flex-row { flex-direction: row; }
