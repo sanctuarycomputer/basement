@@ -15,13 +15,13 @@ Import any settings before the `src/index.scss` file and any default settings wi
 
 # Usage with Webpack (or Create React App)
 
-First, install the webpack deps for compiling sass:
+First, install the webpack deps for compiling sass. If you are using Create React App `< v2.0.0` you will be using [react-app-rewired](https://github.com/timarney/react-app-rewired) if you haven't ejected and will require the following packages:
 
 ```
-yarn install basement sass-loader node-sass --dev
+yarn add sass-loader node-sass --dev
 ```
 
-Add the following loader to your webpack config (you'll need to use [react-app-rewired](https://github.com/timarney/react-app-rewired) if you haven't ejected):
+Add the following loader to your webpack config:
 
 ```
 {
@@ -34,6 +34,13 @@ Add the following loader to your webpack config (you'll need to use [react-app-r
 },
 ```
 
+If you are using Create React App `v2.0.0+` then SCSS modules is natively supported and you will only need to install `node-sass`:
+
+```
+yarn add node-sass --dev
+```
+
+
 Then rename your `index.css` file to `index.scss` (and be sure to change any javascript imports to `import 'index.scss';`). Sass should be working nicely, now!
 
 ---
@@ -41,7 +48,7 @@ Then rename your `index.css` file to `index.scss` (and be sure to change any jav
 Now you can install basement:
 
 ```
-yarn install basement --dev
+yarn add 'https://github.com/sanctuarycomputer/basement.git' --dev
 ```
 
 And require it in `index.scss` like so:
