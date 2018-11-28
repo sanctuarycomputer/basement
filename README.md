@@ -13,7 +13,7 @@ Import any settings before the `src/index.scss` file and any default settings wi
   'src/index';
 ```
 
-# Usage with Webpack (or Create React App)
+## Usage with Webpack (or Create React App)
 
 First, install the webpack deps for compiling sass. If you are using Create React App `< v2.0.0` you will be using [react-app-rewired](https://github.com/timarney/react-app-rewired) if you haven't ejected and will require the following packages:
 
@@ -56,6 +56,37 @@ And require it in `index.scss` like so:
 ```
 @import '~basement/src/index';
 ```
+
+
+## Usage with Ember JS
+
+Be sure that Basement, as well as [Ember CLI Sass](https://github.com/aexmachina/ember-cli-sass), [Sass](https://www.npmjs.com/package/sass), and [Broccoli Funnel](https://github.com/broccolijs/broccoli-funnel) are included in your devDependencies.
+```
+yarn add -D 'https://github.com/sanctuarycomputer/basement.git'
+yarn add -D sass ember-cli-sass broccoli-funnel
+```
+
+Update `ember-cli-build.js`. Using broccoli-funnel enables us to set the destination directory, so that the call to import 'basement/index' works as we'd expect.
+```
+const EmberApp = require('ember-cli/lib/broccoli/ember-app');
+const Funnel = require('broccoli-funnel');
+
+module.exports = function(defaults) {
+  let app = new EmberApp(defaults, {
+    sassOptions: {
+      includePaths: [
+        new Funnel('node_modules/basement/src', { destDir: 'basement' })
+      ]
+    }
+  });
+```
+
+Now you can import basement in your main sass file
+```
+@import 'basement/index';
+```
+
+
 
 # Settings
 
