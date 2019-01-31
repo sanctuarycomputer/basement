@@ -33,8 +33,8 @@ $class-definitions: (
   right: ( float: right ),
   w100: ( width: 100% ),
   h100: ( height: 100% ),
-  height-auto: ( height: auto ),
-  width-auto: ( width: auto ),
+  hauto: ( height: auto ),
+  wauto: ( width: auto ),
   col: ( float: left ),
   flex-row: ( flex-direction: row ),
   flex-col: ( flex-direction: column ),
@@ -114,8 +114,8 @@ $class-definitions: (
 // 'lg-flex', 'xl-flex', will all be generated (name of the prefixes is dependant
 // on what is set).
 $dynamic-classes:
-  width-auto,
-  height-auto,
+  wauto,
+  hauto,
   text-left,
   text-right,
   text-center,

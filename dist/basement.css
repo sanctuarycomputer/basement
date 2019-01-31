@@ -76,9 +76,9 @@
 
 .h100 { height: 100%; }
 
-.height-auto { height: auto; }
+.hauto { height: auto; }
 
-.width-auto { width: auto; }
+.wauto { width: auto; }
 
 .col { float: left; }
 
@@ -620,8 +620,8 @@
 
 .border-color-blue { border-color: #0A3862; }
 
-@media (min-width: 640px) { .sm\:width-auto { width: auto; }
-  .sm\:height-auto { height: auto; }
+@media (min-width: 640px) { .sm\:wauto { width: auto; }
+  .sm\:hauto { height: auto; }
   .sm\:text-left { text-align: left; }
   .sm\:text-right { text-align: right; }
   .sm\:text-center { text-align: center; }
@@ -859,8 +859,8 @@
   .sm\:off-11 { margin-left: 91.6666666667%; }
   .sm\:col-12 { width: 100%; }
   .sm\:off-12 { margin-left: 100%; } }
-@media (min-width: 832px) { .md\:width-auto { width: auto; }
-  .md\:height-auto { height: auto; }
+@media (min-width: 832px) { .md\:wauto { width: auto; }
+  .md\:hauto { height: auto; }
   .md\:text-left { text-align: left; }
   .md\:text-right { text-align: right; }
   .md\:text-center { text-align: center; }
@@ -1098,8 +1098,8 @@
   .md\:off-11 { margin-left: 91.6666666667%; }
   .md\:col-12 { width: 100%; }
   .md\:off-12 { margin-left: 100%; } }
-@media (min-width: 1024px) { .lg\:width-auto { width: auto; }
-  .lg\:height-auto { height: auto; }
+@media (min-width: 1024px) { .lg\:wauto { width: auto; }
+  .lg\:hauto { height: auto; }
   .lg\:text-left { text-align: left; }
   .lg\:text-right { text-align: right; }
   .lg\:text-center { text-align: center; }
@@ -1337,8 +1337,8 @@
   .lg\:off-11 { margin-left: 91.6666666667%; }
   .lg\:col-12 { width: 100%; }
   .lg\:off-12 { margin-left: 100%; } }
-@media (min-width: 1152px) { .xl\:width-auto { width: auto; }
-  .xl\:height-auto { height: auto; }
+@media (min-width: 1152px) { .xl\:wauto { width: auto; }
+  .xl\:hauto { height: auto; }
   .xl\:text-left { text-align: left; }
   .xl\:text-right { text-align: right; }
   .xl\:text-center { text-align: center; }
