@@ -102,3 +102,22 @@ Overwriting these settings is encouraged! To do so, define them in a `.scss` fil
 | `$dynamic_spacing` | Whether or not each margin and padding class is generated for each breakpoint. | `true` |
 | `$decimal_deliminator` | The deliminator used to replace a `.` | `'_'` |
 | `$dynamic-grid` | Whether or not each `col-<i>` class is generated for each breakpoint. | `true` |
+
+# Contributing
+
+We want basement to be effective and effecient so we encourage contribution. You can contribute by making a pull request and requesting review from previous contributors or a member of the [Sanctuary Computer](https://github.com/sanctuarycomputer) team.
+
+## Running locally
+
+```bash
+# clone the repo
+git clone https://github.com/sanctuarycomputer/basement.git
+
+cd basement
+
+# Install SASS if you haven't already
+sudo gem install sass
+
+# run the builder
+./bin/build
+```
