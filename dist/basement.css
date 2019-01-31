@@ -20,11 +20,17 @@
 
 .text-left { text-align: left; }
 
+.text-right { text-align: right; }
+
 .text-center { text-align: center; }
 
 .text-justify { text-align: justify; }
 
 .nowrap { white-space: nowrap; }
+
+.text-overflow-ellipsis { text-overflow: ellipsis; }
+
+.text-overflow-clip { text-overflow: clip; }
 
 .underline { text-decoration: underline; }
 
@@ -611,6 +617,7 @@
 .border-color-blue { border-color: #0A3862; }
 
 @media (min-width: 640px) { .sm\:text-left { text-align: left; }
+  .sm\:text-right { text-align: right; }
   .sm\:text-center { text-align: center; }
   .sm\:text-justify { text-align: justify; }
   .sm\:inline { display: inline; }
@@ -620,6 +627,8 @@
   .sm\:table-cell { display: table-cell; }
   .sm\:flex { display: flex; }
   .sm\:inline-flex { display: inline-flex; }
+  .sm\:absolute { position: absolute; }
+  .sm\:relative { position: relative; }
   .sm\:fixed { position: fixed; }
   .sm\:sticky { position: sticky; }
   .sm\:left { float: left; }
@@ -845,6 +854,7 @@
   .sm\:col-12 { width: 100%; }
   .sm\:off-12 { margin-left: 100%; } }
 @media (min-width: 832px) { .md\:text-left { text-align: left; }
+  .md\:text-right { text-align: right; }
   .md\:text-center { text-align: center; }
   .md\:text-justify { text-align: justify; }
   .md\:inline { display: inline; }
@@ -854,6 +864,8 @@
   .md\:table-cell { display: table-cell; }
   .md\:flex { display: flex; }
   .md\:inline-flex { display: inline-flex; }
+  .md\:absolute { position: absolute; }
+  .md\:relative { position: relative; }
   .md\:fixed { position: fixed; }
   .md\:sticky { position: sticky; }
   .md\:left { float: left; }
@@ -1079,6 +1091,7 @@
   .md\:col-12 { width: 100%; }
   .md\:off-12 { margin-left: 100%; } }
 @media (min-width: 1024px) { .lg\:text-left { text-align: left; }
+  .lg\:text-right { text-align: right; }
   .lg\:text-center { text-align: center; }
   .lg\:text-justify { text-align: justify; }
   .lg\:inline { display: inline; }
@@ -1088,6 +1101,8 @@
   .lg\:table-cell { display: table-cell; }
   .lg\:flex { display: flex; }
   .lg\:inline-flex { display: inline-flex; }
+  .lg\:absolute { position: absolute; }
+  .lg\:relative { position: relative; }
   .lg\:fixed { position: fixed; }
   .lg\:sticky { position: sticky; }
   .lg\:left { float: left; }
@@ -1313,6 +1328,7 @@
   .lg\:col-12 { width: 100%; }
   .lg\:off-12 { margin-left: 100%; } }
 @media (min-width: 1152px) { .xl\:text-left { text-align: left; }
+  .xl\:text-right { text-align: right; }
   .xl\:text-center { text-align: center; }
   .xl\:text-justify { text-align: justify; }
   .xl\:inline { display: inline; }
@@ -1322,6 +1338,8 @@
   .xl\:table-cell { display: table-cell; }
   .xl\:flex { display: flex; }
   .xl\:inline-flex { display: inline-flex; }
+  .xl\:absolute { position: absolute; }
+  .xl\:relative { position: relative; }
   .xl\:fixed { position: fixed; }
   .xl\:sticky { position: sticky; }
   .xl\:left { float: left; }

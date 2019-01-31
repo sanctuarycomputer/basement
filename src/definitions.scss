@@ -9,6 +9,8 @@ $class-definitions: (
   text-center: ( text-align: center ),
   text-justify: ( text-align: justify ),
   nowrap: ( white-space: nowrap ),
+  text-overflow-ellipsis: ( text-overflow: ellipsis ),
+  text-overflow-clip: ( text-overflow: clip ),
   underline: ( text-decoration: underline ),
   inline: ( display: inline ),
   block: ( display: block ),
