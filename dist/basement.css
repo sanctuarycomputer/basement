@@ -76,6 +76,10 @@
 
 .h100 { height: 100%; }
 
+.hauto { height: auto; }
+
+.wauto { width: auto; }
+
 .col { float: left; }
 
 .flex-row { flex-direction: row; }
@@ -616,7 +620,9 @@
 
 .border-color-blue { border-color: #0A3862; }
 
-@media (min-width: 640px) { .sm\:text-left { text-align: left; }
+@media (min-width: 640px) { .sm\:wauto { width: auto; }
+  .sm\:hauto { height: auto; }
+  .sm\:text-left { text-align: left; }
   .sm\:text-right { text-align: right; }
   .sm\:text-center { text-align: center; }
   .sm\:text-justify { text-align: justify; }
@@ -853,7 +859,9 @@
   .sm\:off-11 { margin-left: 91.6666666667%; }
   .sm\:col-12 { width: 100%; }
   .sm\:off-12 { margin-left: 100%; } }
-@media (min-width: 832px) { .md\:text-left { text-align: left; }
+@media (min-width: 832px) { .md\:wauto { width: auto; }
+  .md\:hauto { height: auto; }
+  .md\:text-left { text-align: left; }
   .md\:text-right { text-align: right; }
   .md\:text-center { text-align: center; }
   .md\:text-justify { text-align: justify; }
@@ -1090,7 +1098,9 @@
   .md\:off-11 { margin-left: 91.6666666667%; }
   .md\:col-12 { width: 100%; }
   .md\:off-12 { margin-left: 100%; } }
-@media (min-width: 1024px) { .lg\:text-left { text-align: left; }
+@media (min-width: 1024px) { .lg\:wauto { width: auto; }
+  .lg\:hauto { height: auto; }
+  .lg\:text-left { text-align: left; }
   .lg\:text-right { text-align: right; }
   .lg\:text-center { text-align: center; }
   .lg\:text-justify { text-align: justify; }
@@ -1327,7 +1337,9 @@
   .lg\:off-11 { margin-left: 91.6666666667%; }
   .lg\:col-12 { width: 100%; }
   .lg\:off-12 { margin-left: 100%; } }
-@media (min-width: 1152px) { .xl\:text-left { text-align: left; }
+@media (min-width: 1152px) { .xl\:wauto { width: auto; }
+  .xl\:hauto { height: auto; }
+  .xl\:text-left { text-align: left; }
   .xl\:text-right { text-align: right; }
   .xl\:text-center { text-align: center; }
   .xl\:text-justify { text-align: justify; }

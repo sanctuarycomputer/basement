@@ -120,4 +120,7 @@ sudo gem install sass
 
 # run the builder
 ./bin/build
+
+# run the minified version before committing
+./bin/build_min
 ```
