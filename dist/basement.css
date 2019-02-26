@@ -220,6 +220,8 @@
 
 .break-word { word-wrap: break-word; overflow-wrap: break-word; }
 
+.list-style-none { list-style: none; }
+
 .m0 { margin: 0rem; }
 
 .mt0 { margin-top: 0rem; }
