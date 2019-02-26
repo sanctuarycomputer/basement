@@ -1,3 +1,0 @@
-#!/bin/bash
-
-sass --watch src/index.scss:dist/basement.min.css --style compressed

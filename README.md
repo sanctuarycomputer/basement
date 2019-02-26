@@ -115,12 +115,16 @@ git clone https://github.com/sanctuarycomputer/basement.git
 
 cd basement
 
-# Install SASS if you haven't already
-sudo gem install sass
+# Install dependancies (currently only node-sass)
+yarn install
+# or
+npm install
 
-# run the builder
-./bin/build
+# Run the watcher
+yarn watch
+# or the minified watch if you are pointing towards the minified build (dist/basement.min.css)
+yarn watch:min
 
-# run the minified version before committing
-./bin/build_min
+# Build before commiting
+yarn build
 ```

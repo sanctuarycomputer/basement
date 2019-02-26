@@ -4,5 +4,13 @@
   "description": "Ground floor CSS utility classes",
   "repository": "https://github.com/sanctuarycomputer/basement.git",
   "author": "Sanctuary Computer <dev@sanctuary.computer>",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "node-sass": "^4.11.0"
+  },
+  "scripts": {
+    "watch": "node-sass -w --output-style compact --source-map dist/basement.css.map src/index.scss dist/basement.css;",
+    "watch:min": "node-sass -w --output-style compressed --source-map dist/basement.min.css.map src/index.scss dist/basement.min.css;",
+    "build": "node-sass --output-style compact --source-map dist/basement.css.map src/index.scss dist/basement.css; node-sass --output-style compressed --source-map dist/basement.min.css.map src/index.scss dist/basement.min.css;"
+  }
 }
