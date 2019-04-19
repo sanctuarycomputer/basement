@@ -50,6 +50,12 @@
 
 .inline-flex { display: inline-flex; }
 
+.vertical-align-top { vertical-align: top; }
+
+.vertical-align-middle { vertical-align: middle; }
+
+.vertical-align-bottom { vertical-align: bottom; }
+
 .overflow-hidden { overflow: hidden; }
 
 .overflow-x-hidden { overflow-x: hidden; }
@@ -637,6 +643,9 @@
   .sm\:table-cell { display: table-cell; }
   .sm\:flex { display: flex; }
   .sm\:inline-flex { display: inline-flex; }
+  .sm\:vertical-align-top { vertical-align: top; }
+  .sm\:vertical-align-middle { vertical-align: middle; }
+  .sm\:vertical-align-bottom { vertical-align: bottom; }
   .sm\:absolute { position: absolute; }
   .sm\:relative { position: relative; }
   .sm\:fixed { position: fixed; }
@@ -877,6 +886,9 @@
   .md\:table-cell { display: table-cell; }
   .md\:flex { display: flex; }
   .md\:inline-flex { display: inline-flex; }
+  .md\:vertical-align-top { vertical-align: top; }
+  .md\:vertical-align-middle { vertical-align: middle; }
+  .md\:vertical-align-bottom { vertical-align: bottom; }
   .md\:absolute { position: absolute; }
   .md\:relative { position: relative; }
   .md\:fixed { position: fixed; }
@@ -1117,6 +1129,9 @@
   .lg\:table-cell { display: table-cell; }
   .lg\:flex { display: flex; }
   .lg\:inline-flex { display: inline-flex; }
+  .lg\:vertical-align-top { vertical-align: top; }
+  .lg\:vertical-align-middle { vertical-align: middle; }
+  .lg\:vertical-align-bottom { vertical-align: bottom; }
   .lg\:absolute { position: absolute; }
   .lg\:relative { position: relative; }
   .lg\:fixed { position: fixed; }
@@ -1357,6 +1372,9 @@
   .xl\:table-cell { display: table-cell; }
   .xl\:flex { display: flex; }
   .xl\:inline-flex { display: inline-flex; }
+  .xl\:vertical-align-top { vertical-align: top; }
+  .xl\:vertical-align-middle { vertical-align: middle; }
+  .xl\:vertical-align-bottom { vertical-align: bottom; }
   .xl\:absolute { position: absolute; }
   .xl\:relative { position: relative; }
   .xl\:fixed { position: fixed; }
