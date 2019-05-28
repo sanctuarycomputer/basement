@@ -1,0 +1,9 @@
+.node_modules
+node_modules
+.sass-cache
+yarn-error.log
+.DS_Store
+.git
+README.md
+yarn.lock
+basement_logo.svg
