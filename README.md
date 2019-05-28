@@ -48,7 +48,7 @@ Then rename your `index.css` file to `index.scss` (and be sure to change any jav
 Now you can install basement:
 
 ```
-yarn add 'https://github.com/sanctuarycomputer/basement.git' --dev
+yarn add '@sanctucompu/basement'
 ```
 
 And require it in `index.scss` like so:
@@ -62,7 +62,7 @@ And require it in `index.scss` like so:
 
 Be sure that Basement, as well as [Ember CLI Sass](https://github.com/aexmachina/ember-cli-sass), [Sass](https://www.npmjs.com/package/sass), and [Broccoli Funnel](https://github.com/broccolijs/broccoli-funnel) are included in your devDependencies.
 ```
-yarn add -D 'https://github.com/sanctuarycomputer/basement.git'
+yarn add -D '@sanctucompu/basement'
 yarn add -D sass ember-cli-sass broccoli-funnel
 ```
 
@@ -75,7 +75,7 @@ module.exports = function(defaults) {
   let app = new EmberApp(defaults, {
     sassOptions: {
       includePaths: [
-        new Funnel('node_modules/basement/src', { destDir: 'basement' })
+        new Funnel('node_modules/@sanctucompu/basement/src', { destDir: 'basement' })
       ]
     }
   });
