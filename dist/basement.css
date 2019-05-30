@@ -64,9 +64,9 @@
 
 .overflow-auto { overflow: auto; }
 
-.overflow-y-scroll { overflow-y: scroll; }
+.overflow-y-scroll { overflow-y: scroll; -webkit-overflow-scrolling: touch; }
 
-.overflow-x-scroll { overflow-x: scroll; }
+.overflow-x-scroll { overflow-x: scroll; -webkit-overflow-scrolling: touch; }
 
 .overflow-y-auto { overflow-y: auto; }
 
