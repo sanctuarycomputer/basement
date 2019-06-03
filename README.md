@@ -54,7 +54,7 @@ yarn add '@sanctucompu/basement'
 And require it in `index.scss` like so:
 
 ```
-@import '~basement/src/index';
+@import '~@sanctucompu/basement/src/index';
 ```
 
 
@@ -62,7 +62,7 @@ And require it in `index.scss` like so:
 
 Be sure that Basement, as well as [Ember CLI Sass](https://github.com/aexmachina/ember-cli-sass), [Sass](https://www.npmjs.com/package/sass), and [Broccoli Funnel](https://github.com/broccolijs/broccoli-funnel) are included in your devDependencies.
 ```
-yarn add -D '@sanctucompu/basement'
+yarn add -D @sanctucompu/basement
 yarn add -D sass ember-cli-sass broccoli-funnel
 ```
 
@@ -83,7 +83,7 @@ module.exports = function(defaults) {
 
 Now you can import basement in your main sass file
 ```
-@import 'basement/index';
+@import '@sanctucompu/basement/index';
 ```
 
 
