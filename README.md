@@ -75,7 +75,7 @@ module.exports = function(defaults) {
   let app = new EmberApp(defaults, {
     sassOptions: {
       includePaths: [
-        new Funnel('node_modules/@sanctucompu/basement/src', { destDir: 'basement' })
+        new Funnel('node_modules/@sanctucompu/basement/src', { destDir: '@sanctucompu/basement' })
       ]
     }
   });
