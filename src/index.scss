@@ -41,6 +41,15 @@ $class-definitions: map-merge($class-definitions, $grid-definitions);
 //
 $class-definitions: map-merge($class-definitions, $color-definitions);
 
+//
+// Add custom class definitions
+//
+$class-definitions: map-merge($class-definitions, $custom-class-definitions);
+
+//
+// Add custom class definitions to dynamic classes
+//
+$dynamic-classes: map-merge($dynamic-classes, $custom-class-definitions);
 
 //
 // Generate a $dynamic-lass-definitions map from the $dynamic classes list.
