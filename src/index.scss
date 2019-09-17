@@ -14,11 +14,11 @@
 $class-definitions: map-merge($class-definitions, $spacing-definitions);
 
 //
-// If dynamic spacing is enabled, add spacing class names to $dynamic-classe
+// If dynamic spacing is enabled, add spacing class names to $responsive-classe
 //
 @if $dynamic-spacing {
   @each $name, $definition in $spacing-definitions {
-    $dynamic-classes: append($dynamic-classes, $name)
+    $responsive-classes: append($responsive-classes, $name)
   };
 }
 
@@ -28,11 +28,11 @@ $class-definitions: map-merge($class-definitions, $spacing-definitions);
 $class-definitions: map-merge($class-definitions, $grid-definitions);
 
 //
-// If dynamic grid is enabled, add grid class names to $dynamic-classe
+// If dynamic grid is enabled, add grid class names to $responsive-classe
 //
 @if $dynamic-grid {
   @each $name, $definition in $grid-definitions {
-    $dynamic-classes: append($dynamic-classes, $name)
+    $responsive-classes: append($responsive-classes, $name)
   };
 }
 
@@ -47,15 +47,15 @@ $class-definitions: map-merge($class-definitions, $color-definitions);
 $class-definitions: map-merge($class-definitions, $custom-class-definitions);
 
 //
-// Add custom class definitions to dynamic classes
+// Add custom class definitions to responsive classes
 //
-$dynamic-classes: map-merge($dynamic-classes, $custom-class-definitions);
+$responsive-classes: map-merge($responsive-classes, $custom-class-definitions);
 
 //
-// Generate a $dynamic-lass-definitions map from the $dynamic classes list.
+// Generate a $dynamic-class-definitions map from the $responsive classes list.
 //
 $dynamic-class-definitions: ();
-@each $class-name in $dynamic-classes {
+@each $class-name in $responsive-classes {
   @if map-has-key($class-definitions, $class-name) {
     $dynamic-class-definitions: map-merge($dynamic-class-definitions, (
       $class-name: map-get($class-definitions, $class-name)
@@ -86,7 +86,7 @@ $breakpoint-queries: ();
 
 //
 // Generate a class at every breakpoint for each class included in the
-// $dynamic-classes list.
+// $responsive-classes list.
 //
 @each $breakpoint, $query in $breakpoint-queries {
   @media (#{$query}) {
