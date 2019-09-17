@@ -9,6 +9,18 @@
   'spacing';
 
 //
+// Add additional class definitions
+//
+$class-definitions: map-merge($class-definitions, $additional-class-definitions);
+
+//
+// Add additional classes to responsive classes
+//
+@each $name in $additional-responsive-classes {
+  $responsive-classes: append($responsive-classes, $name)
+};
+
+//
 // Add spacing class definitions
 //
 $class-definitions: map-merge($class-definitions, $spacing-definitions);
@@ -40,16 +52,6 @@ $class-definitions: map-merge($class-definitions, $grid-definitions);
 // Add color class definitions
 //
 $class-definitions: map-merge($class-definitions, $color-definitions);
-
-//
-// Add custom class definitions
-//
-$class-definitions: map-merge($class-definitions, $custom-class-definitions);
-
-//
-// Add custom class definitions to responsive classes
-//
-$responsive-classes: map-merge($responsive-classes, $custom-class-definitions);
 
 //
 // Generate a $dynamic-class-definitions map from the $responsive classes list.
