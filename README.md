@@ -102,6 +102,8 @@ Overwriting these settings is encouraged! To do so, define them in a `.scss` fil
 | `$dynamic_spacing` | Whether or not each margin and padding class is generated for each breakpoint. | `true` |
 | `$decimal_deliminator` | The deliminator used to replace a `.` | `'_'` |
 | `$dynamic-grid` | Whether or not each `col-<i>` class is generated for each breakpoint. | `true` |
+| `$additional-class-definitions` | Add additional classes. | `()` |
+| `$additional-responsive-classes` | Create responsive classes from additional class definitions.  | `()` | 
 
 # Contributing
 
