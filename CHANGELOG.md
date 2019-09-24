@@ -1,5 +1,15 @@
 # Change Log
 
+## [v1.1.0](https://github.com/sanctuarycomputer/basement/tree/v1.1.0) (2019-09-24)
+[Full Changelog](https://github.com/sanctuarycomputer/basement/compare/v1.0.0...v1.1.0)
+
+**Merged pull requests:**
+
+- Add custom class definitions [\#27](https://github.com/sanctuarycomputer/basement/pull/27) ([limsohee1002](https://github.com/limsohee1002))
+- Bump lodash from 4.17.11 to 4.17.14 [\#26](https://github.com/sanctuarycomputer/basement/pull/26) ([dependabot[bot]](https://github.com/apps/dependabot))
+- updates ember js install instructions [\#25](https://github.com/sanctuarycomputer/basement/pull/25) ([sepowitz](https://github.com/sepowitz))
+- Update npm references to @sanctucompu/basement on README [\#24](https://github.com/sanctuarycomputer/basement/pull/24) ([joshiefishbein](https://github.com/joshiefishbein))
+
 ## [v1.0.0](https://github.com/sanctuarycomputer/basement/tree/v1.0.0) (2019-05-28)
 [Full Changelog](https://github.com/sanctuarycomputer/basement/compare/v0.0.1...v1.0.0)
 
