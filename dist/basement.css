@@ -36,6 +36,10 @@
 
 .underline { text-decoration: underline; }
 
+.text-decoration-underline { text-decoration: underline; }
+
+.text-decoration-none { text-decoration: none; }
+
 .inline { display: inline; }
 
 .block { display: block; }

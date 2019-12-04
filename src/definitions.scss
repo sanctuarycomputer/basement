@@ -11,7 +11,9 @@ $class-definitions: (
   nowrap: ( white-space: nowrap ),
   text-overflow-ellipsis: ( text-overflow: ellipsis ),
   text-overflow-clip: ( text-overflow: clip ),
-  underline: ( text-decoration: underline ),
+  underline: ( text-decoration: underline ), /* DEPRECATED: To be removed in 2.0.0 */
+  text-decoration-underline: ( text-decoration: underline ),
+  text-decoration-none: ( text-decoration: none ),
   inline: ( display: inline ),
   block: ( display: block ),
   inline-block: ( display: inline-block ),
