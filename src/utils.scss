@@ -26,7 +26,7 @@ $media-queries: ();
   @if $next-breakpoint-index <= length($breakpoint-sizes) {
     $next-breakpoint-size: nth($breakpoint-sizes, $next-breakpoint-index);
     $media-queries: map-merge($media-queries, (
-      '#{$name}-down': 'max-width: #{$next-breakpoint-size}'
+      '#{$name}-down': 'max-width: #{calc($next-breakpoint-size - 1px)}'
     ));
   }
 }
