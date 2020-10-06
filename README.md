@@ -97,7 +97,7 @@ Overwriting these settings is encouraged! To do so, define them in a `.scss` fil
 | `$grid-columns` | Amount of columns in the grid. | `12` |
 | `$colors` | Color map use for `color-<color>`, `bg-color-<color>`, and `border-color-<color>` classes. | `('black': #000, 'white': #FFF, 'blue': #0A3862);` |
 | `$breakpoints` | Media query breakpoints. | `('sm': 640px, 'md': 832px, 'lg': 1024px, 'xl': 1152px)` |
-| `$spacing-units` | Spacing units defined here will be available in spacing and padding utility classes at each breakpoint. For example, `.p_25` will set `padding: .25rem;` on the selected element. If you update the list of `$spacing_units` to include `3.125rem`, then `.sm:mt3_125` will affect the top margin of your element only at small screen sizes.  | `0rem, .25rem, .5rem, .75rem, 1rem, 2rem, 3rem, 4rem, 6rem, 8rem;` |
+| `$spacing-units` | Spacing units defined here will be available in spacing and padding utility classes at each breakpoint. For example, `.p_25` will set `padding: .25rem;` on the selected element. If you update the list of `$spacing_units` to include `3.125rem`, then `.sm:mt3_125` will affect the top margin of your element only at small screen sizes.  Negative margin classes are automatically generated and prefixed with `n`, so `.mn1` will set `margin: -1rem`.  | `0rem, .25rem, .5rem, .75rem, 1rem, 2rem, 3rem, 4rem, 6rem, 8rem;` |
 | `$aspect-ratios` | Ratios for `.aspect-<ratio>` utility class. | `('square': (1, 1), 'landscape': (16, 9), 'portrait': (2, 3));`|
 | `$dynamic_spacing` | Whether or not each margin and padding class is generated for each breakpoint. | `true` |
 | `$decimal_deliminator` | The deliminator used to replace a `.` | `'_'` |
