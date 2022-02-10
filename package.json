@@ -6,7 +6,7 @@
   "author": "Sanctuary Computer <dev@sanctuary.computer>",
   "license": "MIT",
   "devDependencies": {
-    "node-sass": "^4.11.0"
+    "node-sass": "^7.0.0"
   },
   "scripts": {
     "watch": "node-sass -w --output-style compact --source-map dist/basement.css.map src/index.scss dist/basement.css;",
